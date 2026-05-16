@@ -10,7 +10,7 @@
         return;
     }
 
-    // ලොග් වෙලා ඉන්න කෙනාගේ Role එක අල්ලගන්නවා (Admin ද බලන්න)
+    //     Role   (Admin  )
     String role = (String) session.getAttribute("userRole");
 
     DramaManager manager = new DramaManager();
@@ -26,7 +26,7 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <script defer src="${pageContext.request.contextPath}/assets/js/site.js"></script>
     <style>
-        /* 🌟 1. මුළු පේජ් එකම හිමීට පේන්න ගන්නවා (Fade In) 🌟 */
+        /* 🌟 1.       (Fade In) 🌟 */
         body {
             background: linear-gradient(rgba(26, 26, 46, 0.5), rgba(22, 33, 62, 0.7)), url('../images/1234.jpg') no-repeat center center fixed;
             background-size: cover;
@@ -43,7 +43,7 @@
 
         ::-webkit-scrollbar { display: none; }
 
-        /* 🌟 2. Welcome අකුරු ටික උඩ ඉඳන් හිමීට එනවා 🌟 */
+        /* 🌟 2. Welcome       🌟 */
         .hero-section {
             padding: 4rem 0 2rem 0;
             text-align: center;
@@ -55,15 +55,15 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* 🌟 3. පෝස්ටර් ටික පල්ලෙහා ඉඳන් හිමීට උඩට එනවා 🌟 */
+        /* 🌟 3.        🌟 */
         .poster-card {
             background: transparent;
             border: none;
             transition: transform 0.3s;
             max-width: 320px;
             margin: auto;
-            opacity: 0; /* මුලින් පේන්නේ නෑ */
-            animation: fadeSlideUp 0.8s ease-out 0.3s forwards; /* තත්පර 0.3ක් ඉඳලා තමයි එන්නේ */
+            opacity: 0; /*    */
+            animation: fadeSlideUp 0.8s ease-out 0.3s forwards; /*  0.3    */
         }
 
         @keyframes fadeSlideUp {

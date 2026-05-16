@@ -2,7 +2,7 @@
 <%@ page import="java.sql.*" %>
 <%@ page import="user_management.DBConnection" %>
 <%
-    // 1. Security Check: ලොග් වෙලාද ඉන්නේ බලනවා
+    // 1. Security Check:    
     String loggedUser = (String) session.getAttribute("username");
     if (loggedUser == null) {
         response.sendRedirect("login.jsp?error=login_first");
@@ -13,7 +13,7 @@
     String lastName = "";
     String phone = "";
 
-    // 🌟 CRUD - Read (R) කොටස: Database එකෙන් විස්තර ගන්නවා 🌟
+    // 🌟 CRUD - Read (R) : Database    🌟
     try (Connection con = DBConnection.getConnection()) {
         String query = "SELECT first_name, last_name, phone FROM users WHERE email = ?";
         PreparedStatement pst = con.prepareStatement(query);
@@ -98,7 +98,7 @@
 <div class="container my-5 d-flex justify-content-center flex-grow-1 align-items-center">
     <div class="glass-card" style="max-width: 500px; width: 100%;">
 
-        <!-- නමේ මුල් අකුර පෙන්වීම -->
+        <!--     -->
         <div class="profile-avatar">
             <%= (firstName != null && !firstName.isEmpty()) ? firstName.substring(0, 1) : "U" %>
         </div>
@@ -127,7 +127,7 @@
             <a href="../event_ui/view_dramas.jsp" class="btn btn-outline-light" style="border-radius: 20px; padding: 8px 25px;">
                 <i data-feather="arrow-left" style="width: 18px; margin-bottom: 2px;"></i> Back
             </a>
-            <!-- 🌟 Edit Profile බොත්තම 🌟 -->
+            <!-- 🌟 Edit Profile  🌟 -->
             <button type="button" class="btn btn-info fw-bold" data-bs-toggle="modal" data-bs-target="#editProfileModal" style="border-radius: 20px; padding: 8px 25px;">
                 <i data-feather="edit-2" style="width: 18px; margin-bottom: 2px;"></i> Edit Profile
             </button>

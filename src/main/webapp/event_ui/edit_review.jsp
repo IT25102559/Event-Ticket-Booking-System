@@ -25,12 +25,12 @@
                 dramaName = rs.getString("drama_name");
                 rating = rs.getInt("rating");
                 comment = rs.getString("comment");
-                reviewOwner = rs.getString("user_email"); // අයිතිකාරයා කවුද කියලා ගන්නවා
+                reviewOwner = rs.getString("user_email"); //    
             }
         } catch(Exception e) { e.printStackTrace(); }
     }
 
-    // 🌟 Security Check: අයිතිකාරයා නෙවෙයි නම් සහ Admin ත් නෙවෙයි නම් ආපහු හරවනවා 🌟
+    // 🌟 Security Check:     Admin      🌟
     if (!"Admin".equals(role) && !loggedUser.equals(reviewOwner)) {
         response.sendRedirect("reviews.jsp?error=access_denied");
         return;

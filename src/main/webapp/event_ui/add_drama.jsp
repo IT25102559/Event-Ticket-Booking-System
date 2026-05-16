@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-    // Security Check: Admin විතරක් ඇතුළට ගන්නවා
+    // Security Check: Admin   
     String role = (String) session.getAttribute("userRole");
     if (!"Admin".equals(role)) {
         response.sendRedirect("../user_ui/login.jsp?error=true");
@@ -19,7 +19,7 @@
     <style>
         body {
             min-height: 100vh;
-            /* අලුත් Background එක */
+            /*  Background  */
             background: linear-gradient(rgba(26, 26, 46, 0.85), rgba(22, 33, 62, 0.95)), url('../images/stage_bg.jpg') no-repeat center center fixed;
             background-size: cover;
             display: flex;
@@ -67,7 +67,7 @@
             box-shadow: 0 0 15px rgba(56, 239, 125, 0.4) !important;
         }
 
-        /* 🌟 බ්‍රවුසර් එකෙන් Auto-fill කරද්දී එන සුදු පාට අයින් කරන ට්‍රික් එක 🌟 */
+        /* 🌟 ‍  Auto-fill       ‍  🌟 */
         .custom-input:-webkit-autofill,
         .custom-input:-webkit-autofill:hover,
         .custom-input:-webkit-autofill:focus,
@@ -81,7 +81,7 @@
 
         .input-label { color: #e2e8f0; font-weight: 600; margin-bottom: 8px; font-size: 0.85rem; }
 
-        /* Save Button එක (Neon Green) */
+        /* Save Button  (Neon Green) */
         .btn-glow-success {
             background: linear-gradient(135deg, #11998e, #38ef7d);
             color: white; border: none; border-radius: 50px; padding: 12px;
@@ -92,7 +92,7 @@
             transform: translateY(-3px); box-shadow: 0 12px 25px rgba(56, 239, 125, 0.6); color: white;
         }
 
-        /* අලුත් Custom File Upload Design එක */
+        /*  Custom File Upload Design  */
         input[type="file"] { display: none; }
 
         .file-upload-label {

@@ -27,7 +27,7 @@
             padding: 20px;
         }
 
-        /* සුපිරි Glassmorphism Card එක */
+        /*  Glassmorphism Card  */
         .login-card {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(20px);
@@ -64,7 +64,7 @@
             box-shadow: 0 0 15px rgba(0, 198, 255, 0.4) !important;
         }
 
-        /* 🌟 බ්‍රවුසර් එකෙන් Auto-fill කරද්දී එන සුදු පාට අයින් කරන ට්‍රික් එක 🌟 */
+        /* 🌟 ‍  Auto-fill       ‍  🌟 */
         .custom-input:-webkit-autofill,
         .custom-input:-webkit-autofill:hover,
         .custom-input:-webkit-autofill:focus,

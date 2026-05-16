@@ -2,7 +2,7 @@
 <%@ page import="java.sql.*" %>
 <%@ page import="user_management.DBConnection" %>
 <%
-    // Security Check: ලොග් වෙලා නැත්නම් Login එකට යවනවා
+    // Security Check:    Login  
     String loggedUser = (String) session.getAttribute("username");
     if (loggedUser == null) {
         response.sendRedirect("../user_ui/login.jsp?msg=login_first");
@@ -32,7 +32,7 @@
         @keyframes slideFade { 0% { opacity: 0; transform: translateY(30px); } 100% { opacity: 1; transform: translateY(0); } }
         .gradient-text { background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800; }
 
-        /* අර සුදු වෙලා තිබ්බ Input කොටු වල ලස්සන අඳුරු Design එක */
+        /*     Input     Design  */
         .custom-input { background: rgba(255, 255, 255, 0.08) !important; border: 1px solid rgba(255, 255, 255, 0.2) !important; color: white !important; border-radius: 0.8rem; padding: 12px 15px; transition: all 0.3s ease; }
         .custom-input:focus { background: rgba(255, 255, 255, 0.12) !important; border-color: #00c6ff !important; box-shadow: 0 0 15px rgba(0, 198, 255, 0.4) !important; }
         .custom-input::placeholder { color: rgba(255, 255, 255, 0.5) !important; }
@@ -65,7 +65,7 @@
             <span class="gradient-text">Secured Payment</span>
         </h3>
 
-        <!-- 👇 form එකට autocomplete="off" එකතු කළා 👇 -->
+        <!-- 👇 form  autocomplete="off"   👇 -->
         <form action="../PaymentServlet" method="POST" autocomplete="off">
             <div class="mb-3">
                 <label class="form-label input-label">Booking ID</label>

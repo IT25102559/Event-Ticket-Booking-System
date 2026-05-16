@@ -21,7 +21,7 @@
     <style>
         body {
             min-height: 100vh;
-            /* 👇 අලුත් Background එක සහ Overlay එක 👇 */
+            /* 👇  Background   Overlay  👇 */
             background: linear-gradient(rgba(26, 26, 46, 0.5), rgba(22, 33, 62, 0.7)), url('../images/Admin.png') no-repeat center center fixed;
             background-size: cover;
 
@@ -76,7 +76,7 @@
 
         .glass-table tbody tr:hover td { background: rgba(255, 255, 255, 0.12); transform: scale(1.01); border-color: rgba(0, 198, 255, 0.4); }
 
-        /* 👇 Status Badges මෝස්තරය 👇 */
+        /* 👇 Status Badges  👇 */
         .status-paid { display: inline-flex; align-items: center; gap: 5px; background: rgba(16, 185, 129, 0.2); color: #10b981; padding: 6px 14px; border-radius: 50px; font-weight: bold; font-size: 0.8rem; border: 1px solid rgba(16, 185, 129, 0.4); }
         .status-pending { display: inline-flex; align-items: center; gap: 5px; background: rgba(245, 158, 11, 0.2); color: #f59e0b; padding: 6px 14px; border-radius: 50px; font-weight: bold; font-size: 0.8rem; border: 1px solid rgba(245, 158, 11, 0.4); }
 

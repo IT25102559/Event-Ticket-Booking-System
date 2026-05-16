@@ -83,7 +83,7 @@
             </h3>
 
             <div>
-                <!-- Promo Codes බොත්තම -->
+                <!-- Promo Codes  -->
                 <a href="manage_promos.jsp" class="btn btn-outline-warning me-3" style="border-radius: 50px; padding: 10px 20px; font-weight: bold; box-shadow: 0 4px 10px rgba(255, 193, 7, 0.1);">
                     <i data-feather="tag" style="margin-right: 5px;"></i> Manage Promos
                 </a>

@@ -29,7 +29,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        /* ලස්සන Glassmorphism Card එක */
+        /*  Glassmorphism Card  */
         .glass-card {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(20px);
@@ -98,7 +98,7 @@
 
 <div class="container">
     <div class="row">
-        <!-- Review එක දාන ෆෝම් එක -->
+        <!-- Review     -->
         <div class="col-md-5 mb-4">
             <div class="glass-card">
                 <h3 class="mb-4 text-center">
@@ -106,7 +106,7 @@
                     <span style="background: linear-gradient(135deg, #00c6ff, #0072ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800;">Add a Review</span>
                 </h3>
 
-                <!-- Success/Error මැසේජ් -->
+                <!-- Success/Error  -->
                 <% if("success".equals(request.getParameter("msg"))) { %>
                     <div class="alert alert-success py-2 border-0" style="background: rgba(16, 185, 129, 0.2); color: #10b981;"><i data-feather="check-circle" class="me-2" style="width: 16px;"></i>Thank you for your feedback!</div>
                 <% } else if("updated".equals(request.getParameter("msg"))) { %>
@@ -141,12 +141,12 @@
             </div>
         </div>
 
-        <!-- දාලා තියෙන Reviews බලන තැන -->
+        <!--   Reviews   -->
         <div class="col-md-7">
             <h3 class="mb-4 fw-bold" style="color: #e2e8f0;">Recent Community Reviews</h3>
             <%
                 try (Connection con = DBConnection.getConnection()) {
-                    // 🌟 👇 මෙන්න මෙතන තමයි වෙනස් කළේ (u.username වෙනුවට u.email දැම්මා) 👇 🌟
+                    // 🌟 👇      (u.username  u.email ) 👇 🌟
                     String query = "SELECT r.*, u.first_name, u.last_name FROM reviews r LEFT JOIN users u ON r.user_email = u.email ORDER BY r.review_date DESC";
                     PreparedStatement pst = con.prepareStatement(query);
                     ResultSet rs = pst.executeQuery();
@@ -158,7 +158,7 @@
                         String reviewId = rs.getString("id");
                         String reviewOwner = rs.getString("user_email");
 
-                        // First Name එකයි Last Name එකයි ගන්නවා (නැත්නම් Email එක පෙන්වනවා)
+                        // First Name  Last Name   ( Email  )
                         String fName = rs.getString("first_name");
                         String lName = rs.getString("last_name");
                         String displayName = (fName != null && lName != null) ? (fName + " " + lName) : reviewOwner;
@@ -187,7 +187,7 @@
                                     <small class="text-light fw-bold"><%= displayName %></small>
                                 </div>
 
-                                <!-- Action බොත්තම් -->
+                                <!-- Action  -->
                                 <% if(canManage) { %>
                                     <div class="d-flex gap-2">
                                         <a href="edit_review.jsp?id=<%= reviewId %>" class="btn btn-outline-warning btn-sm" style="border-radius: 20px; padding: 5px 15px;">

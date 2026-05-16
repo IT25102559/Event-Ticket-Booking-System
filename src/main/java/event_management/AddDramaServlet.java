@@ -14,7 +14,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 
 @WebServlet("/AddDramaServlet")
-// 👇 Photo Upload කරන්න මේ කෑල්ල අනිවාර්යයි 👇
+// 👇 Photo Upload     👇
 @MultipartConfig(
         fileSizeThreshold = 1024 * 1024 * 2,  // 2MB
         maxFileSize = 1024 * 1024 * 10,       // 10MB
@@ -24,40 +24,40 @@ public class AddDramaServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        String location = request.getParameter("location"); // ඔයා කලින් දාන්න කිව්ව කෑල්ල
+        String location = request.getParameter("location"); //     
         String id = request.getParameter("dramaId");
         String name = request.getParameter("dramaName");
         String date = request.getParameter("showDate");
         String director = request.getParameter("director");
 
-        // 🌟 Photo එක අල්ලගෙන ඒක Save කරන කෑල්ල 🌟
+        // 🌟 Photo    Save   🌟
         Part filePart = request.getPart("posterFile");
         String fileName = filePart.getSubmittedFileName();
 
-        // Project එකේ 'images' folder එකට path එක හදාගන්නවා
+        // Project  'images' folder  path  
         String uploadPath = getServletContext().getRealPath("") + File.separator + "images";
         File uploadDir = new File(uploadPath);
         if (!uploadDir.exists()) {
-            uploadDir.mkdir(); // Folder එක නැත්නම් අලුතින් හදනවා
+            uploadDir.mkdir(); // Folder    
         }
 
-        // පින්තූරය Server එකේ සේව් කරනවා
+        //  Server   
         if(fileName != null && !fileName.isEmpty()) {
             filePart.write(uploadPath + File.separator + fileName);
         } else {
-            fileName = "default.jpg"; // පින්තූරයක් දැම්මේ නැත්නම් සාමාන්‍ය එකක් දානවා
+            fileName = "default.jpg"; //    ‍  
         }
 
         try (Connection con = DBConnection.getConnection()) {
 
-            // 👇 Database Query එකට 'poster' කියන අලුත් Column එකත් එකතු කළා 👇
+            // 👇 Database Query  'poster'   Column    👇
             String query = "INSERT INTO dramas (id, name, show_date, director, poster) VALUES (?, ?, ?, ?, ?)";
             PreparedStatement pst = con.prepareStatement(query);
             pst.setString(1, id);
             pst.setString(2, name);
             pst.setString(3, date);
             pst.setString(4, director);
-            pst.setString(5, fileName); // පින්තූරේ නම DB එකට යනවා
+            pst.setString(5, fileName); //   DB  
 
             int result = pst.executeUpdate();
 

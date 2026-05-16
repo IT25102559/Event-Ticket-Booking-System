@@ -11,7 +11,7 @@
 
     <style>
         body {
-            /* අලුත් Background පින්තූරය */
+            /*  Background  */
             background: linear-gradient(rgba(26, 26, 46, 0.8), rgba(22, 33, 62, 0.9)), url('../images/Register.jpg') no-repeat center center fixed;
             background-size: cover;
             display: flex;
@@ -30,7 +30,7 @@
             padding: 20px;
         }
 
-        /* සුපිරි Glassmorphism Card එක */
+        /*  Glassmorphism Card  */
         .login-card {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(20px);
@@ -110,7 +110,7 @@
     </div>
 </nav>
 
-<!-- 👇 Register Error Message (වැරදුණොත් උඩින් පාවෙලා එනවා) 👇 -->
+<!-- 👇 Register Error Message (   ) 👇 -->
 <% String error = request.getParameter("error"); %>
 <% if (error != null) { %>
     <div class="custom-toast" id="errorToast" style="border: 1px solid rgba(239, 68, 68, 0.5); box-shadow: 0 10px 30px rgba(239, 68, 68, 0.3);">
@@ -130,7 +130,7 @@
             let toast = document.getElementById('errorToast');
             if(toast) { toast.style.animation = 'slideUpToast 0.5s forwards'; setTimeout(() => toast.remove(), 500); }
         }
-        setTimeout(closeToast, 6000); // තත්පර 6කින් මැකෙනවා
+        setTimeout(closeToast, 6000); //  6 
     </script>
 <% } %>
 <!-- 👆 ---------------------- 👆 -->
@@ -144,7 +144,7 @@
 
         <form action="../RegisterServlet" method="POST">
 
-            <!-- First Name සහ Last Name එක පේළියට -->
+            <!-- First Name  Last Name   -->
             <div class="row mb-3">
                 <div class="col-6">
                     <label class="form-label input-label"><i data-feather="user" class="me-2 text-info" style="width:16px;"></i> First Name</label>
@@ -156,7 +156,7 @@
                 </div>
             </div>
 
-            <!-- Phone Number (අංක 10ක් විතරයි ගහන්න පුළුවන්) -->
+            <!-- Phone Number ( 10   ) -->
             <div class="mb-3">
                 <label class="form-label input-label"><i data-feather="phone" class="me-2 text-info" style="width:16px;"></i> Phone Number</label>
                 <input type="text" name="phone" class="form-control custom-input" placeholder="07XXXXXXXX"
@@ -167,7 +167,7 @@
                        required>
             </div>
 
-            <!-- Email Address (මේක තමයි Login වෙන්න පාවිච්චි කරන්නේ) -->
+            <!-- Email Address (  Login   ) -->
             <div class="mb-3">
                 <label class="form-label input-label"><i data-feather="mail" class="me-2 text-info" style="width:16px;"></i> Email Address</label>
                 <input type="email" name="email" class="form-control custom-input" placeholder="you@example.com" required>

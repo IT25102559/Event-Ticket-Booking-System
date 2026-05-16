@@ -9,7 +9,7 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <script defer src="${pageContext.request.contextPath}/assets/js/site.js"></script>
     <style>
-        /* 1️⃣ අර කලින් පාවිච්චි කරපු Dark gradient එකමයි */
+        /* 1️⃣     Dark gradient  */
         body {
             min-height: 100vh;
             background: linear-gradient(135deg, #1a1a2e, #16213e);

@@ -74,7 +74,7 @@
 
             <button type="submit" class="btn btn-glow mb-3">Update Promo</button>
 
-            <!-- 👇 අලුතින් එකතු කරපු Cancel සහ Delete බොත්තම් දෙක 👇 -->
+            <!-- 👇    Cancel  Delete   👇 -->
             <div class="d-flex gap-2">
                 <a href="manage_promos.jsp" class="btn btn-outline-secondary w-50 fw-bold" style="border-radius: 50px;">Cancel</a>
 

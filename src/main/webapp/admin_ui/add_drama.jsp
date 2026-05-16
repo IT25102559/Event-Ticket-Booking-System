@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-    // Security Check: Admin විතරක් ඇතුළට ගන්නවා
+    // Security Check: Admin   
     String role = (String) session.getAttribute("userRole");
     if (!"Admin".equals(role)) {
         response.sendRedirect("../user_ui/login.jsp?error=true");
@@ -70,7 +70,7 @@
 
         .input-label { color: #e2e8f0; font-weight: 600; margin-bottom: 8px; font-size: 0.85rem; }
 
-        /* Save Button එක (Neon Green) */
+        /* Save Button  (Neon Green) */
         .btn-glow-success {
             background: linear-gradient(135deg, #11998e, #38ef7d);
             color: white; border: none; border-radius: 50px; padding: 12px;
@@ -81,16 +81,16 @@
             transform: translateY(-3px); box-shadow: 0 12px 25px rgba(56, 239, 125, 0.6); color: white;
         }
 
-        /* 🌟 අලුත් Custom File Upload Design එක 🌟 */
+        /* 🌟  Custom File Upload Design  🌟 */
         input[type="file"] {
-            display: none; /* කැත Default Button එක හංගනවා */
+            display: none; /*  Default Button   */
         }
 
         .file-upload-label {
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 2px dashed rgba(255, 255, 255, 0.3) !important; /* Dashed Border එකක් දෙනවා */
+            border: 2px dashed rgba(255, 255, 255, 0.3) !important; /* Dashed Border   */
             cursor: pointer;
             color: #cbd5e1;
             padding: 15px !important;
@@ -103,7 +103,7 @@
             color: white;
         }
 
-        /* ෆයිල් එකක් තේරුවාම එන ලස්සන Design එක */
+        /*      Design  */
         .file-upload-label.active {
             border-style: solid !important;
             border-color: #38ef7d !important;
@@ -182,17 +182,17 @@
 <script>
     feather.replace();
 
-    // පින්තූරයක් තේරුවාම ඒකේ නම පෙන්නන්න හදපු අලුත් JS Function එක
+    //        JS Function 
     function updateFileName(input) {
         const fileNameSpan = document.getElementById('fileName');
         const fileLabel = document.getElementById('fileLabel');
 
         if (input.files && input.files.length > 0) {
-            // ෆයිල් එකක් තේරුවොත් කොළ පාටින් නම පෙන්නනවා
+
             fileNameSpan.innerHTML = "<b>" + input.files[0].name + "</b> selected";
             fileLabel.classList.add('active');
         } else {
-            // මුකුත් නැත්නම් පරණ විදිහටම තියෙනවා
+
             fileNameSpan.textContent = "Click here to browse your image";
             fileLabel.classList.remove('active');
         }

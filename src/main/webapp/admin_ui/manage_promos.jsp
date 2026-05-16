@@ -36,7 +36,7 @@
     </div>
 
     <div class="row">
-        <!-- අලුත් Promo Code එකක් දාන ෆෝම් එක -->
+        <!--  Promo Code     -->
         <div class="col-md-4 mb-4">
             <div class="card-custom">
                 <h4 class="mb-3 text-warning">Create New Promo</h4>
@@ -108,7 +108,7 @@
                                         <% } %>
                                     </td>
 
-                                    <!-- 👇 Edit සහ Delete බොත්තම් දෙකම 👇 -->
+                                    <!-- 👇 Edit  Delete   👇 -->
                                     <td class="d-flex justify-content-center gap-2">
                                         <a href="edit_promo.jsp?code=<%= rs.getString("code") %>"
                                            class="btn btn-outline-warning btn-sm fw-bold"

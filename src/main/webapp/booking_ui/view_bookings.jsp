@@ -220,7 +220,7 @@
                     <% if (bookingList != null && !bookingList.isEmpty()) {
                            for (Ticket ticket : bookingList) {
 
-                               // Payment එක කරලද කියලා බලනවා
+                               // Payment    
                                boolean isPaid = false;
                                try (Connection con = DBConnection.getConnection();
                                     PreparedStatement pst = con.prepareStatement("SELECT id FROM payments WHERE booking_id = ?")) {
@@ -243,7 +243,7 @@
 
                             <td class="fw-bold" style="color: #4ade80; font-size: 1.1rem;">Rs. <%= ticket.getSeats() * ticket.getPrice() %></td>
 
-                            <!-- 👇 අයිකන් විතරක් පෙන්වන Status එක 👇 -->
+                            <!-- 👇    Status  👇 -->
                             <td>
                                 <% if(isPaid) { %>
                                     <span class="status-icon-paid" title="Paid">
@@ -256,7 +256,7 @@
                                 <% } %>
                             </td>
 
-                            <!-- Action බොත්තම් -->
+                            <!-- Action  -->
                             <td>
                                 <div class="d-flex justify-content-center gap-2">
                                     <a href="edit_booking.jsp?id=<%= ticket.getBookingId() %>"

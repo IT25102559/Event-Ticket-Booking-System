@@ -1,15 +1,15 @@
 <%@ page import="ticket_booking.BookingManager" %>
 <%
-    // 1. මුලින්ම බලනවා යූසර් ලොග් වෙලාද ඉන්නේ කියලා (Security Check)
+    // 1.        (Security Check)
     String loggedUser = (String) session.getAttribute("username");
 
     if (loggedUser == null) {
-        // ලොග් වෙලා නැත්නම් කෙලින්ම Login පේජ් එකට යවනවා
+        //     Login   
         response.sendRedirect("../user_ui/login.jsp?msg=login_first");
         return;
     }
 
-    // 2. ලොග් වෙලා නම් විතරක් ටිකට් විස්තර ලෝඩ් කරනවා
+    // 2.        
     String selectedDrama = request.getParameter("drama");
     if (selectedDrama == null) selectedDrama = "";
 
@@ -225,7 +225,7 @@
             setTimeout(() => toast.remove(), 500);
         }
     }
-    // මැසේජ් එක තත්පර 6කින් ඔටෝ මැකිලා යයි
+    //    6   
     if(document.getElementById('myToast')) {
         setTimeout(closeToast, 6000);
     }
@@ -238,17 +238,17 @@
             <span class="gradient-text">Book Your Ticket</span>
         </h3>
 
-        <!-- 👇 මෙතන form එකට autocomplete="off" දැම්මා 👇 -->
+        <!-- 👇  form  autocomplete="off"  👇 -->
         <form action="../BookTicketServlet" method="POST" autocomplete="off">
             <div class="mb-3">
                 <label class="form-label input-label"><i data-feather="user" class="me-2 text-info" style="width:16px;"></i> Customer Name</label>
-                <!-- 👇 මෙතන input එකටත් autocomplete="off" දැම්මා 👇 -->
+                <!-- 👇  input  autocomplete="off"  👇 -->
                 <input type="text" name="customerName" class="form-control custom-input" placeholder="e.g. Kamal Perera" autocomplete="off" required>
             </div>
 
             <div class="mb-3">
                 <label class="form-label input-label"><i data-feather="film" class="me-2 text-info" style="width:16px;"></i> Drama Name</label>
-                <!-- 👇 මෙතන input එකටත් autocomplete="off" දැම්මා 👇 -->
+                <!-- 👇  input  autocomplete="off"  👇 -->
                 <input type="text" name="dramaName" class="form-control custom-input" value="<%= selectedDrama %>" placeholder="e.g. Maname" autocomplete="off" required>
             </div>
 
