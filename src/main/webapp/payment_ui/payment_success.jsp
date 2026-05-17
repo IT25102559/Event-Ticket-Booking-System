@@ -9,7 +9,7 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <script defer src="${pageContext.request.contextPath}/assets/js/site.js"></script>
     <style>
-        /* 1️⃣ අර කලින් පාවිච්චි කරපු Dark gradient එකමයි */
+        
         body {
             min-height: 100vh;
             background: linear-gradient(135deg, #1a1a2e, #16213e);
@@ -17,7 +17,7 @@
             flex-direction: column;
             font-family: system-ui, sans-serif;
         }
-        /* 2️⃣ Card slide‑fade animation */
+    
         @keyframes slideFade {
             0%   { opacity: 0; transform: translateY(30px); }
             100% { opacity: 1; transform: translateY(0); }
@@ -26,7 +26,7 @@
             animation: slideFade 0.8s ease-out;
             border-radius: 1rem;
         }
-        /* 3️⃣ Button hover lift */
+        
         .btn-success {
             transition: transform .2s, box-shadow .2s;
         }
@@ -34,7 +34,7 @@
             transform: translateY(-2px);
             box-shadow: 0 8px 15px rgba(0,0,0,.2);
         }
-        /* 4️⃣ Success Icon Style */
+        
         .success-icon {
             color: #198754;
             width: 70px;
@@ -83,7 +83,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-    // Render feather icons
+    
     feather.replace();
 </script>
 </body>

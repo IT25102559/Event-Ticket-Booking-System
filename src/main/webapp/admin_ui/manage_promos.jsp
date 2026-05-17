@@ -36,7 +36,7 @@
     </div>
 
     <div class="row">
-        <!-- අලුත් Promo Code එකක් දාන ෆෝම් එක -->
+    
         <div class="col-md-4 mb-4">
             <div class="card-custom">
                 <h4 class="mb-3 text-warning">Create New Promo</h4>
@@ -74,7 +74,7 @@
                 <% } else if("update_failed".equals(request.getParameter("error")) || "delete_failed".equals(request.getParameter("error"))) { %>
                     <div class="alert alert-danger py-2 text-center" style="border-radius: 8px;">Failed to process request!</div>
                 <% } %>
-                <!-- 👆 ------------------------------------------ 👆 -->
+                
 
                 <table class="table table-custom text-center">
                     <thead>
@@ -108,7 +108,7 @@
                                         <% } %>
                                     </td>
 
-                                    <!-- 👇 Edit සහ Delete බොත්තම් දෙකම 👇 -->
+                                    
                                     <td class="d-flex justify-content-center gap-2">
                                         <a href="edit_promo.jsp?code=<%= rs.getString("code") %>"
                                            class="btn btn-outline-warning btn-sm fw-bold"
@@ -123,7 +123,7 @@
                                             <i data-feather="trash-2" style="width: 14px; height: 14px;"></i> Delete
                                         </a>
                                     </td>
-                                    <!-- 👆 ---------------------- 👆 -->
+                                    
                                 </tr>
                         <%
                                 }

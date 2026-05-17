@@ -38,7 +38,7 @@
     <script defer src="${pageContext.request.contextPath}/assets/js/site.js"></script>
     <style>
         body {
-            /* 👇 අලුත් අඳුරු Theme එකට ගැළපෙන්න වෙනස් කළා 👇 */
+            
             background: linear-gradient(rgba(15, 15, 30, 0.8), rgba(10, 10, 20, 0.9)), url('../images/stage_bg.jpg') no-repeat center center fixed;
             background-size: cover;
             color: white;
@@ -49,7 +49,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         .card-custom {
-            /* 👇 කාඩ් එකෙත් අඳුරු නිල් පාට 👇 */
+            
             background: rgba(15, 20, 40, 0.75);
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);

@@ -96,7 +96,7 @@
 
 <div class="container">
     <div class="row">
-        <!-- Review එක දාන ෆෝම් එක -->
+        
         <div class="col-md-5 mb-4">
             <div class="glass-card">
                 <h3 class="mb-4 text-center">
@@ -104,7 +104,7 @@
                     <span style="background: linear-gradient(135deg, #00c6ff, #0072ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800;">Add a Review</span>
                 </h3>
 
-                <!-- Success/Error මැසේජ් -->
+                
                 <% if("success".equals(request.getParameter("msg"))) { %>
                     <div class="alert alert-success py-2 border-0" style="background: rgba(16, 185, 129, 0.2); color: #10b981;"><i data-feather="check-circle" class="me-2" style="width: 16px;"></i>Thank you for your feedback!</div>
                 <% } else if("updated".equals(request.getParameter("msg"))) { %>

@@ -30,7 +30,7 @@
             color: white;
         }
 
-        /* Glassmorphism Card */
+        
         .admin-card {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(20px);
@@ -55,7 +55,7 @@
             font-weight: 800;
         }
 
-        /* Input Box Design */
+        
         .custom-input {
             background: rgba(255, 255, 255, 0.08) !important;
             border: 1px solid rgba(255, 255, 255, 0.2) !important;
@@ -73,7 +73,7 @@
 
         .input-label { color: #e2e8f0; font-weight: 600; margin-bottom: 8px; }
 
-        /* Update Button */
+        
         .btn-glow-warning {
             background: linear-gradient(135deg, #f6d365, #fda085);
             color: #000;

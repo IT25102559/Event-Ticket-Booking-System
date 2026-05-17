@@ -27,7 +27,7 @@
             padding: 20px;
         }
 
-        /* සුපිරි Glassmorphism Card එක */
+        
         .login-card {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(20px);
@@ -64,7 +64,7 @@
             box-shadow: 0 0 15px rgba(0, 198, 255, 0.4) !important;
         }
 
-        /* 🌟 බ්‍රවුසර් එකෙන් Auto-fill කරද්දී එන සුදු පාට අයින් කරන ට්‍රික් එක 🌟 */
+        
         .custom-input:-webkit-autofill,
         .custom-input:-webkit-autofill:hover,
         .custom-input:-webkit-autofill:focus,
@@ -92,7 +92,7 @@
         .btn-glow:hover { transform: translateY(-3px); box-shadow: 0 12px 25px rgba(0, 114, 255, 0.6); color: white; }
         .input-label { color: #e2e8f0; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 8px; }
 
-        /* Floating Toast CSS */
+        
         .custom-toast {
             position: fixed; top: 30px; left: 50%; transform: translateX(-50%);
             background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);

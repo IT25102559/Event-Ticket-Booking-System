@@ -11,7 +11,7 @@
 
     <style>
         body {
-            /* අලුත් Background පින්තූරය */
+            
             background: linear-gradient(rgba(26, 26, 46, 0.8), rgba(22, 33, 62, 0.9)), url('../images/Register.jpg') no-repeat center center fixed;
             background-size: cover;
             display: flex;
@@ -30,7 +30,7 @@
             padding: 20px;
         }
 
-        /* සුපිරි Glassmorphism Card එක */
+        
         .login-card {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(20px);
@@ -85,7 +85,7 @@
         .btn-glow:hover { transform: translateY(-3px); box-shadow: 0 12px 25px rgba(0, 114, 255, 0.6); color: white; }
         .input-label { color: #e2e8f0; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 8px; font-size: 0.9rem;}
 
-        /* 👇 Floating Toast CSS 👇 */
+    
         .custom-toast {
             position: fixed; top: 30px; left: 50%; transform: translateX(-50%);
             background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
@@ -99,7 +99,7 @@
 </head>
 <body>
 
-<!-- Navigation Bar -->
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm w-100">
     <div class="container-fluid">
         <a class="navbar-brand fw-bold" href="../event_ui/view_dramas.jsp"><i data-feather="film"></i> EventTix</a>
@@ -110,7 +110,7 @@
     </div>
 </nav>
 
-<!-- 👇 Register Error Message (වැරදුණොත් උඩින් පාවෙලා එනවා) 👇 -->
+
 <% String error = request.getParameter("error"); %>
 <% if (error != null) { %>
     <div class="custom-toast" id="errorToast" style="border: 1px solid rgba(239, 68, 68, 0.5); box-shadow: 0 10px 30px rgba(239, 68, 68, 0.3);">
@@ -130,10 +130,10 @@
             let toast = document.getElementById('errorToast');
             if(toast) { toast.style.animation = 'slideUpToast 0.5s forwards'; setTimeout(() => toast.remove(), 500); }
         }
-        setTimeout(closeToast, 6000); // තත්පර 6කින් මැකෙනවා
+        setTimeout(closeToast, 6000); 
     </script>
 <% } %>
-<!-- 👆 ---------------------- 👆 -->
+
 
 <div class="login-wrapper">
     <div class="login-card">
@@ -144,7 +144,7 @@
 
         <form action="../RegisterServlet" method="POST">
 
-            <!-- First Name සහ Last Name එක පේළියට -->
+            
             <div class="row mb-3">
                 <div class="col-6">
                     <label class="form-label input-label"><i data-feather="user" class="me-2 text-info" style="width:16px;"></i> First Name</label>
@@ -156,7 +156,7 @@
                 </div>
             </div>
 
-            <!-- Phone Number (අංක 10ක් විතරයි ගහන්න පුළුවන්) -->
+            
             <div class="mb-3">
                 <label class="form-label input-label"><i data-feather="phone" class="me-2 text-info" style="width:16px;"></i> Phone Number</label>
                 <input type="text" name="phone" class="form-control custom-input" placeholder="07XXXXXXXX"
@@ -167,13 +167,13 @@
                        required>
             </div>
 
-            <!-- Email Address (මේක තමයි Login වෙන්න පාවිච්චි කරන්නේ) -->
+        
             <div class="mb-3">
                 <label class="form-label input-label"><i data-feather="mail" class="me-2 text-info" style="width:16px;"></i> Email Address</label>
                 <input type="email" name="email" class="form-control custom-input" placeholder="you@example.com" required>
             </div>
 
-            <!-- Password -->
+        
             <div class="mb-4">
                 <label class="form-label input-label"><i data-feather="lock" class="me-2 text-info" style="width:16px;"></i> Create Password</label>
                 <input type="password" name="password" class="form-control custom-input" placeholder="........" required>

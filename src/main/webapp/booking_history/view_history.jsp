@@ -5,14 +5,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Booking Report | Admin</title>
-    <!-- Bootstrap 5 -->
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/site.css">
-    <!-- Feather icons (lightweight) -->
+
     <script src="https://unpkg.com/feather-icons"></script>
     <script defer src="${pageContext.request.contextPath}/assets/js/site.js"></script>
     <style>
-        /* 1️⃣ Same dark gradient used across the whole app */
+        
         body {
             min-height: 100vh;
             background: linear-gradient(135deg, #1a1a2e, #16213e);
@@ -20,7 +20,7 @@
             flex-direction: column;
             font-family: system-ui, sans-serif;
         }
-        /* 2️⃣ Card slide‑fade animation */
+        
         @keyframes slideFade {
             0%   { opacity: 0; transform: translateY(30px); }
             100% { opacity: 1; transform: translateY(0); }
@@ -29,7 +29,7 @@
             animation: slideFade 0.8s ease-out;
             border-radius: 1rem;
         }
-        /* 3️⃣ Hover lift for buttons */
+        
         .btn-primary, .btn-outline-primary {
             transition: transform .2s, box-shadow .2s;
         }
@@ -37,7 +37,7 @@
             transform: translateY(-2px);
             box-shadow: 0 8px 15px rgba(0,0,0,.2);
         }
-        /* 4️⃣ Toast container (optional messages) */
+        
         .toast-container {
             position: fixed;
             top: 1rem;
@@ -64,7 +64,7 @@
         <h3 class="text-center fw-bold mb-4">
             <i data-feather="file-text"></i> Comprehensive Booking Report
         </h3>
-        <!-- Optional toast for messages (e.g., ?msg=deleted) -->
+        
         <div class="toast-container">
             <% String msg = request.getParameter("msg");
                if ("deleted".equals(msg)) { %>
@@ -119,12 +119,12 @@
         </div>
     </div>
 </div>
-<!-- Bootstrap bundle (includes Popper) -->
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-    // Render feather icons
+    
     feather.replace();
-    // Auto‑dismiss any toast after 4 seconds
+    
     const toastEls = document.querySelectorAll('.toast');
     toastEls.forEach(el => new bootstrap.Toast(el, { delay: 4000 }).show());
 </script>

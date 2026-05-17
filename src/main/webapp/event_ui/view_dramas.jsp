@@ -62,8 +62,8 @@
             transition: transform 0.3s;
             max-width: 320px;
             margin: auto;
-            opacity: 0; /* මුලින් පේන්නේ නෑ */
-            animation: fadeSlideUp 0.8s ease-out 0.3s forwards; /* තත්පර 0.3ක් ඉඳලා තමයි එන්නේ */
+            opacity: 0; 
+            animation: fadeSlideUp 0.8s ease-out 0.3s forwards; 
         }
 
         @keyframes fadeSlideUp {

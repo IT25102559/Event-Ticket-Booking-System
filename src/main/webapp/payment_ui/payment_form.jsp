@@ -2,7 +2,7 @@
 <%@ page import="java.sql.*" %>
 <%@ page import="user_management.DBConnection" %>
 <%
-    // Security Check: ලොග් වෙලා නැත්නම් Login එකට යවනවා
+    
     String loggedUser = (String) session.getAttribute("username");
     if (loggedUser == null) {
         response.sendRedirect("../user_ui/login.jsp?msg=login_first");
@@ -65,7 +65,7 @@
             <span class="gradient-text">Secured Payment</span>
         </h3>
 
-        <!-- 👇 form එකට autocomplete="off" එකතු කළා 👇 -->
+        
         <form action="../PaymentServlet" method="POST" autocomplete="off">
             <div class="mb-3">
                 <label class="form-label input-label">Booking ID</label>
@@ -93,7 +93,7 @@
                 </div>
             </div>
 
-            <!-- Promo Code Section -->
+            
             <div class="mb-3 p-3" style="background: rgba(255, 193, 7, 0.1); border-radius: 0.8rem; border: 1px dashed rgba(255, 193, 7, 0.5);">
                 <label class="form-label text-warning fw-bold" style="font-size: 0.9rem;">
                     <i data-feather="tag" style="width: 16px; margin-bottom: 2px;"></i> Have a Promo Code?
@@ -105,7 +105,7 @@
                 <small id="promoMessage" class="mt-2 d-block"></small>
             </div>
 
-            <!-- Summary Box Section -->
+            
             <div class="summary-box mb-4">
                 <div class="d-flex justify-content-between mb-2">
                     <span class="text-light">Subtotal:</span>

@@ -185,7 +185,7 @@
             <span class="gradient-text">My Ticket Bookings</span>
         </h3>
 
-        <!-- Success/Error Messages -->
+        
         <div class="d-flex justify-content-center mb-3">
             <% if("deleted".equals(request.getParameter("msg"))) { %>
                 <div class="alert alert-success text-center py-2 w-100" style="max-width: 450px; border-radius: 10px; background: rgba(40, 167, 69, 0.2); color: #4ade80; border: 1px solid rgba(40, 167, 69, 0.3); margin-bottom: 0;">
@@ -220,7 +220,7 @@
                     <% if (bookingList != null && !bookingList.isEmpty()) {
                            for (Ticket ticket : bookingList) {
 
-                               // Payment එක කරලද කියලා බලනවා
+                               
                                boolean isPaid = false;
                                try (Connection con = DBConnection.getConnection();
                                     PreparedStatement pst = con.prepareStatement("SELECT id FROM payments WHERE booking_id = ?")) {
@@ -243,7 +243,7 @@
 
                             <td class="fw-bold" style="color: #4ade80; font-size: 1.1rem;">Rs. <%= ticket.getSeats() * ticket.getPrice() %></td>
 
-                            <!-- 👇 අයිකන් විතරක් පෙන්වන Status එක 👇 -->
+                            
                             <td>
                                 <% if(isPaid) { %>
                                     <span class="status-icon-paid" title="Paid">
@@ -256,7 +256,7 @@
                                 <% } %>
                             </td>
 
-                            <!-- Action බොත්තම් -->
+                            
                             <td>
                                 <div class="d-flex justify-content-center gap-2">
                                     <a href="edit_booking.jsp?id=<%= ticket.getBookingId() %>"
