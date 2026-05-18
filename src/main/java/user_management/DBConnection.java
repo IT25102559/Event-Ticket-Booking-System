@@ -7,7 +7,7 @@ public class DBConnection {
 
     private static final String URL = "jdbc:mysql://localhost:3306/eventtix_db";
     private static final String USER = "root";
-    private static final String PASSWORD = ""; 
+    private static final String PASSWORD = ""; // XAMPP වල පාස්වර්ඩ් එකක් නෑ, ඒ නිසා හිස්ව තියන්න
 
     public static Connection getConnection() {
         Connection con = null;
