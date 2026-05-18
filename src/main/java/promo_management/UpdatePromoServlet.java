@@ -15,7 +15,7 @@ public class UpdatePromoServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        String originalCode = request.getParameter("originalCode");
+         String originalCode = request.getParameter("originalCode");
         String newCode = request.getParameter("promoCode");
         String discountStr = request.getParameter("discount");
         String status = request.getParameter("status");

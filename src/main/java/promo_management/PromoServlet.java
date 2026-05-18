@@ -16,8 +16,8 @@ public class PromoServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 
-        String code = request.getParameter("code");
-        String discountStr = request.getParameter("discount");
+         String code = request.getParameter("code");
+         String discountStr = request.getParameter("discount");
 
         try (Connection con = DBConnection.getConnection()) {
             int discount = Integer.parseInt(discountStr);

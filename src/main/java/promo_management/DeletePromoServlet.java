@@ -30,7 +30,7 @@ public class DeletePromoServlet extends HttpServlet {
 
                 if (rows > 0) {
 
-                    response.sendRedirect("admin_ui/manage_promos.jsp?msg=promo_deleted");
+                     response.sendRedirect("admin_ui/manage_promos.jsp?msg=promo_deleted");
                 } else {
                     response.sendRedirect("admin_ui/manage_promos.jsp?error=delete_failed");
                 }
